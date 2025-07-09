@@ -1,34 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic-Tac-Toe Game</title>
-    <link rel = "stylesheet" href = "style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class = "msg-container hide">
-      <p id = "msg">Winner</p>
-      <button id = "newbtn">New Game</button>
-    </div>
-    <h1>Tic Tac Toe</h1>
-    <div class = "container">
-       <div class="game">
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
-    </div>
+
+    <div id="menu">
+      <h1>Tic Tac Toe</h1>
+      <button id="onePlayer">Single Player</button>
+      <button id="twoPlayer">Two Players</button>
     </div>
 
-    <button id  = "reset">Reset Game</button>
+    <div id="game">
+      <div class="header">
+        <p class="turn">Player X's Turn</p>
+        <div class="buttons">
+          <button id="menuBtn">Menu</button>
+          <button id="resetBtn">Reset</button>
+        </div>
+      </div>
+      <div class="board">
+        <button class="box" data-index="0"></button>
+        <button class="box" data-index="1"></button>
+        <button class="box" data-index="2"></button>
+        <button class="box" data-index="3"></button>
+        <button class="box" data-index="4"></button>
+        <button class="box" data-index="5"></button>
+        <button class="box" data-index="6"></button>
+        <button class="box" data-index="7"></button>
+        <button class="box" data-index="8"></button>
+      </div>
+    </div>
 
+    <div class="winner-message">
+      <p id="message"></p>
+      <button id="playAgain">Play Again</button>
+    </div>
 
-   <script src = "app.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
